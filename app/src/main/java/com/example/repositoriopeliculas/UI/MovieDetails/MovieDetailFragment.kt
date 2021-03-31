@@ -1,11 +1,9 @@
-package com.example.repositoriopeliculas
+package com.example.repositoriopeliculas.UI.MovieDetails
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.example.repositoriopeliculas.databinding.FragmentMovieBinding
+import com.example.repositoriopeliculas.R
 import com.example.repositoriopeliculas.databinding.FragmentMovieDetailBinding
 
 class MovieDetailFragment : Fragment(R.layout.fragment_movie_detail) {
