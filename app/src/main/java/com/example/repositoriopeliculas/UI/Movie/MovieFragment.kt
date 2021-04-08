@@ -27,13 +27,13 @@ class MovieFragment : Fragment(R.layout.fragment_movie) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentMovieBinding.bind(view)
 
-        viewModel.fetchUpcomingMovies().observe(viewLifecycleOwner, Observer { result ->
+        viewModel.fetchMainScreenMovies().observe(viewLifecycleOwner, Observer { result ->
             when(result){
                 is Resource.Loading -> {
                     Log.d("LiveData", "Loading...")
                 }
                 is Resource.Success -> {
-                    Log.d("LiveData", "${result.data}")
+                    Log.d("LiveData", "Upcoming: ${result.data.first} \n \n TopRated: ${result.data.second} \n \n Popular: ${result.data.third}")
                 }
                 is Resource.Failure -> {
                     Log.d("Error", "${result.exception}")
